@@ -1,5 +1,7 @@
 # Smart Delivery and Route Optimization Engine
 
+Public repository: [https://github.com/AmirBro0/smart-delivery-strategy-assignment-5](https://github.com/AmirBro0/smart-delivery-strategy-assignment-5)
+
 Assignment 5 implements the **Strategy Pattern** in Java 17. Five interchangeable
 algorithms select a route from eight candidates, after applying the same delivery
 constraints. Every successful decision includes a score, a formula explanation,
@@ -251,8 +253,8 @@ downloadable ZIP, history is additionally preserved in
 git clone history/smart-delivery.bundle ../smart-delivery-with-history
 ```
 
-Publish the repository as public under the intended GitHub account, and submit
-its URL together with README or docs/Report.pdf in Moodle. The PDF is in English;
+The public repository is linked at the top of this README. Submit its URL
+together with README or docs/Report.pdf in Moodle. The PDF is in English;
 [docs/DEFENSE_RU.md](docs/DEFENSE_RU.md) contains a Russian defense guide.
 
 ## References
