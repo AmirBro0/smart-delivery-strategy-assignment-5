@@ -1,0 +1,71 @@
+classDiagram
+  class RoutePlanner {
+    -RouteStrategy strategy
+    +setStrategy(RouteStrategy)
+    +plan(List~Route~, DeliveryRequest) RouteDecision
+  }
+  class RouteStrategy {
+    <<interface>>
+    +selectRoute(List~Route~, DeliveryRequest) RouteDecision
+    +getStrategyName() String
+  }
+  class AbstractRouteStrategy {
+    <<abstract>>
+    -ConstraintChecker constraints
+    +selectRoute(List~Route~, DeliveryRequest) RouteDecision
+    #score(Route, RouteMetrics, List~RouteMetrics~) RouteScore
+  }
+  class StrategySelector {
+    -Map strategies
+    +select(DeliveryRequest) RouteStrategy
+  }
+  class ConstraintChecker {
+    +assess(List~Route~, DeliveryRequest) List~RouteAssessment~
+  }
+  class FastestRouteStrategy
+  class CheapestRouteStrategy
+  class EcoFriendlyRouteStrategy
+  class BalancedRouteStrategy
+  class DistanceFirstStrategy
+  class OptimizationWeights
+  class Route {
+    <<record>>
+    +String id
+    +Location origin
+    +Location destination
+    +double distanceKm
+    +int estimatedMinutes
+    +double baseCost
+  }
+  class DeliveryRequest {
+    <<record>>
+    +DeliveryPriority priority
+    +double maxBudget
+    +int maxDeliveryMinutes
+    +double maxEmissionKg
+  }
+  class RouteDecision {
+    <<record>>
+    +Route selectedRoute
+    +RouteMetrics metrics
+    +List assessments
+  }
+  class RouteAssessment
+  class RouteMetrics
+  RoutePlanner --> "1" RouteStrategy : delegates
+  StrategySelector --> RouteStrategy : selects from mapping
+  RouteStrategy <|.. AbstractRouteStrategy
+  AbstractRouteStrategy --> ConstraintChecker : filters first
+  AbstractRouteStrategy <|-- FastestRouteStrategy
+  AbstractRouteStrategy <|-- CheapestRouteStrategy
+  AbstractRouteStrategy <|-- EcoFriendlyRouteStrategy
+  AbstractRouteStrategy <|-- BalancedRouteStrategy
+  AbstractRouteStrategy <|-- DistanceFirstStrategy
+  BalancedRouteStrategy --> OptimizationWeights
+  RouteStrategy ..> Route : candidates
+  RouteStrategy ..> DeliveryRequest : constraints
+  RouteStrategy ..> RouteDecision : result
+  RouteDecision --> Route : selectedRoute
+  RouteDecision --> RouteMetrics
+  RouteDecision --> "*" RouteAssessment
+  RouteAssessment --> Route

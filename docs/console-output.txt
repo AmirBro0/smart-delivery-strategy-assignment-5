@@ -1,0 +1,72 @@
+=== COMPARISON: REQUEST #105 (same candidates and constraints) ===
+Fastest -> R02 | 25 min | 6220.00 KZT | 17.00 km | 6.50 kg CO2 | score 25.0000
+  Reason: Time = 20 base + 3 traffic + 2 weather = 25 min; lowest score; ties use route id
+  Candidate R01 score 40.0000
+  Candidate R02 score 25.0000
+  Candidate R03 score 50.0000
+  Candidate R04 score 38.0000
+  Candidate R05 score 58.0000
+  Candidate R06 score 32.0000
+  Candidate R07 score 47.0000
+  Rejected R08: Route unavailable
+Cheapest -> R05 | 58 min | 850.00 KZT | 10.00 km | 0.10 kg CO2 | score 850.0000
+  Reason: Cost = 500.00 base + 200.00 distance + 150.00 priority + 0.00 fees = 850.00 KZT; lowest score; ties use route id
+  Candidate R01 score 3850.0000
+  Candidate R02 score 6220.0000
+  Candidate R03 score 1950.0000
+  Candidate R04 score 3050.0000
+  Candidate R05 score 850.0000
+  Candidate R06 score 2975.0000
+  Candidate R07 score 3210.0000
+  Rejected R08: Route unavailable
+Eco Friendly -> R05 | 58 min | 850.00 KZT | 10.00 km | 0.10 kg CO2 | score 0.6000
+  Reason: Eco score = 0.10 kg * 1.00 + 10.00 km * 0.05 = 0.6000; lowest score; ties use route id
+  Candidate R01 score 5.1000
+  Candidate R02 score 7.3500
+  Candidate R03 score 4.8000
+  Candidate R04 score 1.5500
+  Candidate R05 score 0.6000
+  Candidate R06 score 2.6500
+  Candidate R07 score 3.4000
+  Rejected R08: Route unavailable
+Balanced -> R06 | 32 min | 2975.00 KZT | 13.00 km | 2.00 kg CO2 | score 0.3046
+  Reason: Balanced score = 0.2121*0.40 time + 0.3957*0.30 cost + 0.4167*0.10 distance + 0.2969*0.20 emission = 0.3046; lowest score; ties use route id
+  Candidate R01 score 0.5202
+  Candidate R02 score 0.5750
+  Candidate R03 score 0.5801
+  Candidate R04 score 0.3607
+  Candidate R05 score 0.4167
+  Candidate R06 score 0.3046
+  Candidate R07 score 0.4891
+  Rejected R08: Route unavailable
+Distance First -> R07 | 47 min | 3210.00 KZT | 8.00 km | 3.00 kg CO2 | score 8.0000
+  Reason: Distance = 8.00 km; choose shortest feasible route; lowest score; ties use route id
+  Candidate R01 score 12.0000
+  Candidate R02 score 17.0000
+  Candidate R03 score 20.0000
+  Candidate R04 score 15.0000
+  Candidate R05 score 10.0000
+  Candidate R06 score 13.0000
+  Candidate R07 score 8.0000
+  Rejected R08: Route unavailable
+
+=== RUNTIME SWITCHING: one RoutePlanner, three strategy changes ===
+Fastest -> R02 | 25 min | 6220.00 KZT | 17.00 km | 6.50 kg CO2 | score 25.0000
+Cheapest -> R05 | 58 min | 850.00 KZT | 10.00 km | 0.10 kg CO2 | score 850.0000
+Eco Friendly -> R05 | 58 min | 850.00 KZT | 10.00 km | 0.10 kg CO2 | score 0.6000
+Balanced -> R06 | 32 min | 2975.00 KZT | 13.00 km | 2.00 kg CO2 | score 0.3046
+Same Fastest algorithm, budget reduced from 10000 to 2500 KZT:
+Fastest -> R02 | 25 min | 6220.00 KZT | 17.00 km | 6.50 kg CO2 | score 25.0000
+Fastest -> R03 | 50 min | 1950.00 KZT | 20.00 km | 3.80 kg CO2 | score 50.0000
+
+=== AUTOMATIC STRATEGY SELECTION ===
+Request A (URGENT, eco=true): Fastest -> R02 | 25 min | 6570.00 KZT | 17.00 km | 6.50 kg CO2 | score 25.0000
+Request B (ECONOMY, eco=false): Cheapest -> R05 | 58 min | 700.00 KZT | 10.00 km | 0.10 kg CO2 | score 700.0000
+Request C (STANDARD, eco=true): Eco Friendly -> R05 | 58 min | 850.00 KZT | 10.00 km | 0.10 kg CO2 | score 0.6000
+Request 105 (STANDARD, eco=false): Balanced -> R06 | 32 min | 2975.00 KZT | 13.00 km | 2.00 kg CO2 | score 0.3046
+
+=== EXPLICIT FAILURE SCENARIOS ===
+Empty candidate list: No suitable route for request 105: candidate list is empty
+No feasible route: No suitable route for request impossible: all candidates violate constraints
+Invalid balanced weights: Balanced weights must sum to 1.0
+Negative request budget: Budget must be finite and non-negative

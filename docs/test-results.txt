@@ -1,0 +1,25 @@
+JUnit 5.11.4 | Maven Surefire 3.5.2 | javac --release 17
+Executed on 28 October 2026 with OpenJDK 25.0.4
+
+-------------------------------------------------------------------------------
+Test set: kz.delivery.ArchitectureTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.238 s -- in kz.delivery.ArchitectureTest
+
+-------------------------------------------------------------------------------
+Test set: kz.delivery.ConstraintsTest
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 s -- in kz.delivery.ConstraintsTest
+
+-------------------------------------------------------------------------------
+Test set: kz.delivery.DistanceFirstStrategyTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in kz.delivery.DistanceFirstStrategyTest
+
+-------------------------------------------------------------------------------
+Test set: kz.delivery.StrategyTest
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 s -- in kz.delivery.StrategyTest
+
+TOTAL: Tests run: 51, Failures: 0, Errors: 0, Skipped: 0
+Both build.ps1 and Maven test/package completed successfully.

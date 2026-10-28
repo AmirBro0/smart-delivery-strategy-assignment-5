@@ -24,7 +24,7 @@ try {
     }
     $utf8 = New-Object System.Text.UTF8Encoding($false)
     $mainSources = @(Get-ChildItem -LiteralPath 'src/main/java' -Recurse -Filter '*.java' |
-        ForEach-Object { '"' + $_.FullName.Replace('\', '/') + '"' })
+        ForEach-Object { '"' + $_.FullName.Substring($projectRoot.Length + 1).Replace('\', '/') + '"' })
     [IO.File]::WriteAllLines((Join-Path $targetRoot 'main-sources.txt'), $mainSources, $utf8)
     & javac --release 17 -encoding UTF-8 -d target/classes '@target/main-sources.txt'
     if ($LASTEXITCODE -ne 0) { throw 'Main compilation failed' }
@@ -39,7 +39,7 @@ try {
             throw 'JUnit checksum mismatch. Remove the cached JAR and retry.'
         }
         $testSources = @(Get-ChildItem -LiteralPath 'src/test/java' -Recurse -Filter '*.java' |
-            ForEach-Object { '"' + $_.FullName.Replace('\', '/') + '"' })
+            ForEach-Object { '"' + $_.FullName.Substring($projectRoot.Length + 1).Replace('\', '/') + '"' })
         [IO.File]::WriteAllLines((Join-Path $targetRoot 'test-sources.txt'), $testSources, $utf8)
         & javac --release 17 -encoding UTF-8 -cp "target/classes;$junit" -d target/test-classes '@target/test-sources.txt'
         if ($LASTEXITCODE -ne 0) { throw 'Test compilation failed' }

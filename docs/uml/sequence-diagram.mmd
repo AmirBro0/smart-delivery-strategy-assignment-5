@@ -1,0 +1,17 @@
+sequenceDiagram
+  actor Client as Client Main automatic
+  participant Selector as StrategySelector
+  participant Planner as RoutePlanner
+  participant Fastest as FastestRouteStrategy
+  participant Checker as ConstraintChecker
+  Client->>Selector: select(urgentRequest)
+  Selector-->>Client: RouteStrategy Fastest
+  Client->>Planner: setStrategy(strategy)
+  Client->>Planner: plan(routes, urgentRequest)
+  Planner->>Fastest: selectRoute(routes, urgentRequest)
+  Note over Fastest: Inherited pipeline from AbstractRouteStrategy
+  Fastest->>Checker: assess(routes, urgentRequest)
+  Checker-->>Fastest: List of RouteAssessment
+  Fastest->>Fastest: score feasible routes and break ties by id
+  Fastest-->>Planner: RouteDecision with winner and assessments
+  Planner-->>Client: RouteDecision
