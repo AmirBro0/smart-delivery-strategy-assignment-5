@@ -1,0 +1,46 @@
+Assignment 5 — Smart Delivery and Route Optimization Engine
+
+ГОТОВО
+Java-проект с пятью стратегиями, восемью маршрутами, автоматическим выбором
+стратегии, тремя переключениями во время работы, проверкой ограничений и
+объяснениями решений. Пройден 51 JUnit 5 тест.
+
+БЫСТРЫЙ ЗАПУСК
+Откройте терминал в этой папке. Требуется Java 17 или новее:
+    java -jar dist/smart-delivery.jar
+
+Отдельные режимы:
+    java -jar dist/smart-delivery.jar --compare
+    java -jar dist/smart-delivery.jar --switch
+    java -jar dist/smart-delivery.jar --auto
+    java -jar dist/smart-delivery.jar --failures
+
+СБОРКА И ТЕСТЫ
+Требуется полный JDK 17+ с java, javac, jar:
+    powershell -ExecutionPolicy Bypass -File .\build.ps1 -Run
+Либо при установленном Maven:
+    mvn package
+    java -jar target/smart-delivery.jar
+
+Первый запуск тестов скачивает JUnit из Maven Central. Само приложение
+не требует сети. Для сборки без тестов: build.ps1 -SkipTests.
+
+ЧТО ОТКРЫТЬ
+docs/Report.pdf          — отчёт на английском, 6 страниц
+docs/DEFENSE_RU.md       — объяснение проекта и ответы для защиты на русском
+docs/uml/               — две UML-диаграммы, SVG и Mermaid
+docs/console-output.txt — фактический вывод программы
+docs/test-results.txt   — результаты выполненных тестов
+README.md               — архитектура, формулы и инструкции
+src/                    — исходники приложения и тестов
+
+ИСТОРИЯ GIT
+В исходной папке проекта история уже есть. В ZIP она сохранена отдельно:
+    git clone history/smart-delivery.bundle ../smart-delivery-with-history
+Пятая стратегия добавлена отдельным коммитом 9baf7b3.
+Коммиты созданы во время работы над проектом, без изменения дат задним числом.
+
+ДЛЯ СДАЧИ
+Опубликуйте репозиторий как public в нужном аккаунте GitHub.
+Отправьте в Moodle ссылку на репозиторий и README или docs/Report.pdf.
+Перед защитой прочитайте docs/DEFENSE_RU.md и проверьте запуск у себя.

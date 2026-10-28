@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1200" height="750" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1200" height="750"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-750)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="20" y="625" width="300" height="105" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="124.4931640625" y="708" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1416) scale(1,-1)">RoutePlanner</text>
+			<path d="M 20,698 L 320,698 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="29" y="678" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1356) scale(1,-1)">- strategy: RouteStrategy</text>
+			<text x="29" y="661" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1322) scale(1,-1)">+ setStrategy(strategy)</text>
+			<text x="29" y="644" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1288) scale(1,-1)">+ plan(routes, request): RouteDecision</text>
+			<rect x="435" y="625" width="360" height="105" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="581.057373046875" y="714" style="font-family: Arial; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1428) scale(1,-1)">&lt;&lt;interface&gt;&gt;</text>
+			<text x="567.15869140625" y="694" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1388) scale(1,-1)">RouteStrategy</text>
+			<path d="M 435,684 L 795,684 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="444" y="664" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1328) scale(1,-1)">+ selectRoute(routes, request): RouteDecision</text>
+			<text x="444" y="647" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1294) scale(1,-1)">+ getStrategyName(): String</text>
+			<rect x="930" y="625" width="250" height="105" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="999.36572265625" y="708" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1416) scale(1,-1)">StrategySelector</text>
+			<path d="M 930,698 L 1180,698 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="939" y="678" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1356) scale(1,-1)">- strategies: Map</text>
+			<text x="939" y="661" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1322) scale(1,-1)">+ select(request): RouteStrategy</text>
+			<path d="M 320,677 L 435,677 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="435 677, 425 683, 425 671" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<text x="350.6533203125" y="688" style="font-family: Arial; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1376) scale(1,-1)">strategy 1</text>
+			<path d="M 930,677 L 795,677 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 6, 4;"/>
+			<polygon points="795 677, 805 671, 805 683" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<text x="843.326171875" y="688" style="font-family: Arial; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1376) scale(1,-1)">selects</text>
+			<rect x="435" y="435" width="360" height="110" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="582.588134765625" y="529" style="font-family: Arial; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1058) scale(1,-1)">&lt;&lt;abstract&gt;&gt;</text>
+			<text x="538.76220703125" y="509" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1018) scale(1,-1)">AbstractRouteStrategy</text>
+			<path d="M 435,499 L 795,499 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="444" y="479" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,958) scale(1,-1)">- constraints: ConstraintChecker</text>
+			<text x="444" y="462" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,924) scale(1,-1)">+ selectRoute(routes, request) final</text>
+			<text x="444" y="445" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,890) scale(1,-1)"># score(route, metrics, eligible): RouteScore</text>
+			<path d="M 615,545 L 615,625 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 6, 4;"/>
+			<polygon points="615 625, 609 612, 621 612" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="930" y="435" width="250" height="110" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="992.37255859375" y="523" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1046) scale(1,-1)">ConstraintChecker</text>
+			<path d="M 930,513 L 1180,513 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="939" y="493" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,986) scale(1,-1)">+ assess(routes, request)</text>
+			<text x="939" y="476" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,952) scale(1,-1)">  : List&lt;RouteAssessment&gt;</text>
+			<path d="M 795,490 L 930,490 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="930 490, 920 496, 920 484" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<text x="836.3330078125" y="502" style="font-family: Arial; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1004) scale(1,-1)">filters first</text>
+			<rect x="20" y="275" width="200" height="80" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="47.6484375" y="333" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,666) scale(1,-1)">FastestRouteStrategy</text>
+			<path d="M 20,323 L 220,323 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="29" y="303" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,606) scale(1,-1)">time + traffic + weather</text>
+			<path d="M 120,355 L 120,400 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<rect x="260" y="275" width="200" height="80" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="280.6484375" y="333" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,666) scale(1,-1)">CheapestRouteStrategy</text>
+			<path d="M 260,323 L 460,323 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="269" y="303" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,606) scale(1,-1)">total delivery cost</text>
+			<path d="M 360,355 L 360,400 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<rect x="500" y="275" width="200" height="80" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="512.09326171875" y="333" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,666) scale(1,-1)">EcoFriendlyRouteStrategy</text>
+			<path d="M 500,323 L 700,323 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="509" y="303" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,606) scale(1,-1)">CO2 and distance weights</text>
+			<path d="M 600,355 L 600,400 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<rect x="740" y="275" width="200" height="80" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="761.03466796875" y="333" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,666) scale(1,-1)">BalancedRouteStrategy</text>
+			<path d="M 740,323 L 940,323 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="749" y="303" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,606) scale(1,-1)">normalized weighted score</text>
+			<path d="M 840,355 L 840,400 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<rect x="980" y="275" width="200" height="80" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="1007.6416015625" y="333" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,666) scale(1,-1)">DistanceFirstStrategy</text>
+			<path d="M 980,323 L 1180,323 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="989" y="303" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,606) scale(1,-1)">shortest feasible distance</text>
+			<path d="M 1080,355 L 1080,400 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 120,400 L 1080,400 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 615,400 L 615,435 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="615 435, 609 422, 621 422" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="410.350341796875" y="235" style="font-family: Arial-Bold; font-size: 15px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,470) scale(1,-1)">All five strategies supply score and getStrategyName</text>
+			<rect x="20" y="80" width="320" height="105" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="151.562744140625" y="169" style="font-family: Arial; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,338) scale(1,-1)">&lt;&lt;record&gt;&gt;</text>
+			<text x="160.1689453125" y="149" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,298) scale(1,-1)">Route</text>
+			<path d="M 20,139 L 340,139 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="29" y="119" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,238) scale(1,-1)">id, endpoints, distance, base time</text>
+			<text x="29" y="102" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,204) scale(1,-1)">cost components, CO2, delays</text>
+			<text x="29" y="85" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,170) scale(1,-1)">availability, prohibited priorities</text>
+			<rect x="435" y="80" width="360" height="105" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="586.562744140625" y="169" style="font-family: Arial; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,338) scale(1,-1)">&lt;&lt;record&gt;&gt;</text>
+			<text x="560.1416015625" y="149" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,298) scale(1,-1)">DeliveryRequest</text>
+			<path d="M 435,139 L 795,139 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="444" y="119" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,238) scale(1,-1)">priority, budget, deadline, CO2 limit</text>
+			<text x="444" y="102" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,204) scale(1,-1)">endpoints, ecoPreferred, blocked routes</text>
+			<rect x="930" y="80" width="250" height="105" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="1026.562744140625" y="169" style="font-family: Arial; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,338) scale(1,-1)">&lt;&lt;record&gt;&gt;</text>
+			<text x="1005.9931640625" y="149" style="font-family: Arial-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,298) scale(1,-1)">RouteDecision</text>
+			<path d="M 930,139 L 1180,139 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="939" y="119" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,238) scale(1,-1)">selectedRoute, metrics, score</text>
+			<text x="939" y="102" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,204) scale(1,-1)">explanation, assessments</text>
+			<path d="M 1055,80 L 1055,50 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 1055,50 L 180,50 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<path d="M 180,50 L 180,80 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<polygon points="180 80, 174 70, 186 70" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,0%,0%); fill-rule: evenodd;"/>
+			<text x="581.6416015625" y="58" style="font-family: Arial; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,116) scale(1,-1)">selectedRoute</text>
+			<text x="343.126220703125" y="15" style="font-family: Arial; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,30) scale(1,-1)">Route and DeliveryRequest are selectRoute parameters; RouteDecision is its return type.</text>
+		</g>
+	</g>
+</svg>

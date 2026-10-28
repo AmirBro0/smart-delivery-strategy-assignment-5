@@ -11,7 +11,7 @@ Install a **JDK 17 or later** and make `java`, `javac`, and `jar` available.
 Windows PowerShell, from this project directory:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .uild.ps1 -Run
+powershell -ExecutionPolicy Bypass -File .\build.ps1 -Run
 ```
 
 Linux or macOS, with curl and a JDK:
