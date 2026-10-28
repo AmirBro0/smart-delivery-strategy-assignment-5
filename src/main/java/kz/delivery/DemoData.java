@@ -40,7 +40,7 @@ public final class DemoData {
 
     public static List<RouteStrategy> strategies() {
         return List.of(new FastestRouteStrategy(), new CheapestRouteStrategy(),
-                new EcoFriendlyRouteStrategy(), new BalancedRouteStrategy(0.4, 0.3, 0.1, 0.2));
+                new EcoFriendlyRouteStrategy(), new BalancedRouteStrategy(0.4, 0.3, 0.1, 0.2), new DistanceFirstStrategy());
     }
 
     public static StrategySelector selector() {
