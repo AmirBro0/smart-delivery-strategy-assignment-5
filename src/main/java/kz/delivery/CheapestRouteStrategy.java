@@ -8,12 +8,9 @@ public final class CheapestRouteStrategy extends AbstractRouteStrategy {
 
     @Override
     protected RouteScore score(Route route, RouteMetrics m, List<RouteMetrics> eligible) {
-        // The surcharge is recoverable from the already rounded request-specific total.
-        double surcharge = m.totalCost() - route.baseCost()
-                - route.distanceKm() * route.costPerKm() - route.additionalFees();
         return new RouteScore(m.totalCost(), String.format(Locale.ROOT,
                 "Cost = %.2f base + %.2f distance + %.2f priority + %.2f fees = %.2f KZT",
-                route.baseCost(), route.distanceKm() * route.costPerKm(), surcharge,
+                route.baseCost(), route.distanceKm() * route.costPerKm(), m.prioritySurcharge(),
                 route.additionalFees(), m.totalCost()));
     }
 }

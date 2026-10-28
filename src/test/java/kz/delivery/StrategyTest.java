@@ -36,6 +36,13 @@ class StrategyTest {
                 0.1, 0.2, 0.005, 0, 0, 0, true, Set.of());
         assertEquals(0.13, RouteMetrics.calculate(a, request()).totalCost(), 1e-9);
     }
+    @Test void monetaryExplanationKeepsPrioritySeparateFromRounding() {
+        Route a = new Route("A", DemoData.ORIGIN, DemoData.DESTINATION, 0.1, 1,
+                0.1, 0.2, 0.005, 0, 0, 0, true, Set.of());
+        RouteDecision d = new CheapestRouteStrategy().selectRoute(List.of(a), request());
+        assertTrue(d.explanation().contains("0.00 priority"));
+        assertEquals(0.13, d.metrics().totalCost(), 1e-9);
+    }
     @Test void ecoIncludesEmissionsAndDistance() {
         var routes = List.of(route("A", 20, 100, 100, 1), route("B", 20, 100, 10, 2));
         RouteDecision d = new EcoFriendlyRouteStrategy().selectRoute(routes, request());
